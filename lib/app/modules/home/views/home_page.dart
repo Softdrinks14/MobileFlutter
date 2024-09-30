@@ -35,27 +35,27 @@ class LandingPage extends StatelessWidget {
                     size: 20.0,
                   ),
                 ),
-                label: 'Home',
+                label: "Home",
                 backgroundColor: Colors.green,
               ),
               BottomNavigationBarItem(
                 icon: Container(
                   child: Icon(
-                    Icons.search,
+                    Icons.shopping_basket,
                     size: 20.0,
                   ),
                 ),
-                label: 'Explore',
+                label: "Order",
                 backgroundColor: Colors.green,
               ),
               BottomNavigationBarItem(
                 icon: Container(
                   child: Icon(
-                    Icons.settings,
+                    Icons.history,
                     size: 20.0,
                   ),
                 ),
-                label: 'Settings',
+                label: "History",
                 backgroundColor: Colors.green,
               ),
               BottomNavigationBarItem(
@@ -65,7 +65,7 @@ class LandingPage extends StatelessWidget {
                     size: 20.0,
                   ),
                 ),
-                label: 'Account',
+                label: "User",
                 backgroundColor: Colors.green,
               ),
             ],
@@ -89,8 +89,11 @@ class LandingPage extends StatelessWidget {
       body: Obx(() => IndexedStack(
             index: landingPageController.tabIndex.value,
             children: [
+              SizedBox.shrink(),
+              SizedBox.shrink(),
+              SizedBox.shrink(),
               imagepicker()
-            ],
+            ]
           )),
     ));
   }
