@@ -4,6 +4,7 @@ part of 'app_pages.dart';
 abstract class Routes {
   Routes._();
   static const HOME = _Paths.HOME;
+  static const Loading = '/views/loadingScreen.dart';
 }
 
 abstract class _Paths {
