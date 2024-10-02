@@ -12,8 +12,7 @@ class LoadingScreen extends StatefulWidget {
 class Loading extends State<LoadingScreen> {
   void initState() {
     super.initState();
-
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(seconds: 4), () {
       Get.off(LandingPage());
     });
   }
@@ -22,6 +21,7 @@ class Loading extends State<LoadingScreen> {
   Widget build(Object context) {
     // TODO: implement build
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +35,9 @@ class Loading extends State<LoadingScreen> {
             SizedBox(
               height: 20,
             ),
-            CircularProgressIndicator(),
+            CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+            ),
           ],
         ),
       ),
